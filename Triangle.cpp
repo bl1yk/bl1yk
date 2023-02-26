@@ -9,19 +9,19 @@ int main()
     Triangle mas[3];
     double a, b, c;
     for (int i = 0; i < 3; i++) {
-        cout << "Ââåäèòå a, b è c äëÿ òðåóãîëüíèêà ¹ " << i + 1 << " ÷åðåç ïðîáåë: " << endl;
+        cout << "Введите a, b и c для треугольника №" << i + 1 << " через пробел: " << endl;
         cin >> a >> b >> c;
         mas[i].set(a, b, c);
         if (!(mas[i].exst_tr())) {
             mas[i].show();
-            cout << "Òðåóãîëüíèêà ñ òàêèìè ñòîðîíàìè íå ñóùåñòâóåò, ïîïðîáóéòå åù¸ ðàç" << endl;
+            cout << Треугольника с такими сторонами не существует, попробуйте ещё раз" << endl;
             i--;
         }
     }
     for (int i = 0; i < 3; i++) {
         mas[i].show();
-        cout << "Ïåðèìåòð òðåóãîëüíèêà: " << mas[i].perimetr() << endl;
-        cout << "Ïëîùàäü òðåóãîëüíèêà: " << mas[i].square() << endl;
+        cout << "Периметр треугольника: " << mas[i].perimetr() << endl;
+        cout << "Площадь треугольника: " << mas[i].square() << endl;
     }
     return 0;
 }
